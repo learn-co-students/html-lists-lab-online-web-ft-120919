@@ -1,3 +1,95 @@
+<!-- The first part of this challenge is to make the first 2 tests pass by:
+
+1. Creating an unordered list 
+2. Nesting each grilled cheese ingredient as a list item wrapped in `<li>` tags
+
+Start up `httpserver` or open `index.html` in your browser. Let's say we wanted
+to list out the ingredients required for making a grilled cheese sandwich.  The
+ingredients are: `2 slices of bread`, `4 slices of cheese`, `1 tbsp of butter`.
+
+For the first part of this challenge, in `index.html`, create an unordered list
+that displays these ingredients. Run `learn` to see if you can pass the first
+test. If you've done things correctly, you'll now be passing the first test,
+but there are more tests to pass! We now need to turn our attention to the next
+test.
+
+Okay, now, lets say we wanted to make our grilled cheese a little more exciting
+and add a couple of cheeses, `cheddar`, `mozzarella`, and `pepper jack`.
+
+To pass the second test, inside the `li` of `4 slices of cheese`, add a nested
+unordered list that lists out the three types of cheese.
+
+If your first two tests are passing, great! It's time to talk about another type
+of list!
+
+## Introduce the Ordered List Tag
+
+<p align="center">
+  <img src="https://i.imgflip.com/28mpcx.jpg"/>
+</p>
+
+Unordered lists are great for organizing related content where it doesn't matter
+what goes first, like in our grilled cheese ingredients.  In situations where we
+_want_ items to be displayed in a specific, numbered order, we will want to use
+the _ordered list_ tag, which is written as `<ol>` instead of `<ul>`. Both use
+`<li>` tags inside, but this time, `<ol>` will display a numbered list instead
+of bullets. If say, we wanted to write a _ranked_ list of favorite foods, it
+might look like:
+
+```HTML
+<h3>Top 5 Favorite Foods</h3>
+<ol>
+  <li>Grilled Cheese</li>
+  <li>Sushi</li>
+  <li>Cheese and crackers</li>
+  <li>Cheese soup</li>
+  <li>Nacho Cheese French Fries</li>
+</ol>
+```
+
+> Feel free to test this out by adding it to `index.html`, saving and refreshing
+> the tab where the file is open. Now, `Grilled Cheese` will be displayed as `1.
+> Grilled Cheese` as the #1 food (where it belongs).
+
+Nested ordered lists works the same as unordered, but instead of hollow and
+square bullets, each nested list will still display numbers.
+
+**Note:** In a nested list, you _must_ provide the `ol` or `ul` wrapper.  Otherwise, an
+`li` inside another `li` will just be displayed as two items at the same level.
+This is because technically, you do not need to write a closing `li` tag.  The
+following example will be displayed the same as the previous:
+
+```HTML
+<h3>Top 5 Favorite Foods</h3>
+<ol>
+  <li>Grilled Cheese
+  <li>Sushi
+  <li>Cheese and crackers
+  <li>Cheese soup
+  <li>Nacho Cheese French Fries
+</ol>
+```
+
+## Reinforce Our Understanding Of Ordered Lists Through Creation
+
+To complete the challenge write the necessary HTML to pass the tests:
+
+3. Create an ordered list 
+4. Nest each step for creating grilled cheese as a list item wrapped in `<li>` tags
+
+Okay, so we've got our grilled cheese ingredients, but what about the steps
+requires to make a grilled cheese? Steps to a recipe need to be
+in order, otherwise we may end up with burnt cheese covered in bread and topped
+with a square of butter. The steps to making a basic grilled cheese would be:
+`Spread butter on bread and frying pan`, `Place bread in frying pan and fry`,
+`Add cheese on top of bread`, `Cover with second slice of bread`, `Turn over and
+fry for 2 minutes`
+
+***
+Once you've written an ordered list that displays these 5 steps correctly, run `learn` 
+to see the tests pass. -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +97,27 @@
 </head>
 <body>
 
-  <!-- Write your HTML in this file -->
+
+  <ol>
+    <li>Spread butter on bread and frying pan</li>
+    <li>Place bread in frying pan and fry</li>
+    <li>Add cheese on top of bread</li>
+    <li>Cover with second slice of bread</li>
+    <li>Turn over and fry for 2 minutes</li>
+  </ol>
+
+  
+  <ul>
+     <li>2 slices of bread</li>
+     <li>4 slices of cheese
+      <ul>
+        <li>cheddar</li>
+        <li>mozzarella</li>
+        <li>pepper jack</li>
+      </ul>
+     </li> 
+     <li>1 tbsp of butter</li>
+  </ul>
 
 </body>
 </html>
